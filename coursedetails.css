@@ -295,6 +295,7 @@ h1, h2, h3, h4, h5, h6 {
 .tabs {
   display: flex;
   flex-wrap: wrap;
+      margin-top: 5%;
 }
 
 .tabs label {
@@ -365,6 +366,59 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-direction: row;
     flex-direction: row;
 }
+.schedulebox-item-list-layout .schedulebox-image {
+    width: 33%;
+}
+.schedulebox-item-list-layout .schedulebox-image a {
+    height: 100%;
+    display: block;
+}
+.schedulebox-item-list-layout .schedulebox-image .schedulebox-img-top {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 8px;
+    height: 100%;
+    object-fit: cover;
+        vertical-align: middle;
+}
+.schedulebox-image .schedulebox-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.schedulebox-image .course-badge-labels {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.course-badge {
+    background-color: #F68A03;
+    color: #fff;
+    font-weight: 700;
+    display: inline-block;
+    padding: 4px 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+}
+.course-badge.blue {
+    background-color: #358FF7;
+}
+.schedulebox-item-list-layout .schedulebox-body {
+    width: 67%;
+}
+
+.card-item .schedulebox-body {
+    padding: 1.6rem;
+}
+.schedulebox-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+}
+
+
 
 .sidebar {
   -ms-flex: 0 0 30%;
@@ -395,7 +449,6 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding-bottom: 20px;
     z-index: 1;
 }
 .preview-course-video .overlay {
@@ -432,4 +485,138 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 15px;
     color: #fff;
     padding-top: 1rem;
+}
+
+.preview-course-feature-content {
+    padding-top: 40px;
+}
+.price {
+    padding-bottom: .5rem;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -ms-flexbox;
+    display: flex;
+}
+.price .discounted-price {
+    font-weight: 600;
+    font-size: 35px;
+    color: #233d63;
+}
+.price before-price {
+  font-size: 16px;
+    margin-right: 3px;
+    color: #7f8897;
+    text-decoration: line-through;
+    margin:0 .25rem;
+}
+.preview-price-discount-text {
+    padding-bottom: 35px;
+}
+.preview-price-discount-text span {
+    color: #F68A03;
+}
+
+.selectdate label {
+    color: #28a745;
+}
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: DodgerBlue;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.red-btn {
+    background-color: #ec5252;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    border:none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.red-btn:hover {
+    background-color: #ef6767;
+    color: #fff;
+}
+.buy-course-btn-box .red-btn, .buy-course-btn-box .white-btn {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.white-btn {
+    background-color: #fff;
+    color: #233d63;
+    -webkit-box-shadow: 0 0 7px rgb(0 0 0 / 7%);
+    -moz-box-shadow: 0 0 7px rgba(0, 0, 0, 0.07);
+    box-shadow: 0 0 7px rgb(0 0 0 / 7%);
+    font-weight: 600;
+    padding: 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:none;
+    cursor: pointer;
+    font-size: 15px;
+}
+.white-btn:hover {
+    background-color: #ec5252;
+    color: #fff;
 }
