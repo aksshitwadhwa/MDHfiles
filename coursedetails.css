@@ -115,7 +115,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 12px;
     line-height: 28px;
 }
-
+.ribbon-blue-bg {
+    background: rgba(53, 143, 247, 0.1) !important;
+    color: #358FF7 !important;
+}
 .ribbon {
     display: inline-block;
     padding-right: 8px;
@@ -245,6 +248,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .schedulebox h5 {
     font-size: 1.25rem;
+}
+.schedulebox h5 a {
+    color: #233d63;
 }
 .width33 {
     -ms-flex: 0 0 33.333333%;
@@ -383,6 +389,8 @@ h1, h2, h3, h4, h5, h6 {
 .schedulebox-image .schedulebox-img-top {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    display: block;
+    width: 100%;
 }
 .schedulebox-image .course-badge-labels {
     position: absolute;
@@ -451,6 +459,14 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: flex-end;
     z-index: 1;
 }
+.schedulebox-item .card-text a {
+    color: #7f8897;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
 .preview-course-video .overlay {
     background: linear-gradient(
 180deg, rgba(30, 30, 28, 0) 0%, rgba(30, 30, 28, 0.9) 100%);
@@ -502,7 +518,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 35px;
     color: #233d63;
 }
-.price before-price {
+.price .before-price {
   font-size: 16px;
     margin-right: 3px;
     color: #7f8897;
@@ -516,33 +532,73 @@ h1, h2, h3, h4, h5, h6 {
     color: #F68A03;
 }
 
+.selectdate {
+    margin-bottom: 10px;
+}
 .selectdate label {
     color: #28a745;
 }
 /*the container must be positioned relative:*/
 .custom-select {
   position: relative;
-  font-family: Arial;
+  border-radius: 3px;
 }
 
 .custom-select select {
   display: none; /*hide original SELECT element:*/
+}
+.dropdown-menu.inner {
+    position: static;
+    float: none;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.bootstrap-select .dropdown-menu {
+    min-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.dropdown-menu.show {
+    display: block;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 10rem;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
 }
 
 .select-selected {
   background-color: DodgerBlue;
 }
 
-/*style the arrow inside the select element:*/
 .select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+    position: absolute;
+    content: "";
+    top: 20px;
+    right: 15px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: #212529 transparent transparent transparent;
 }
 
 /*point the arrow upwards when the select box is open (active):*/
@@ -551,24 +607,20 @@ h1, h2, h3, h4, h5, h6 {
   top: 7px;
 }
 
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
+.select-items div, .select-selected {
+    color: #212529;
+    padding: 8px 16px;
+    border: 1px solid #f8f9fa;
+    font-size: 15px;
+    cursor: pointer;
+    user-select: none;
 }
 
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+.select-selected {
+    border-radius: 3px;
+    color: #212529;
+    background-color: #f8f9fa;
+    border-color: #f8f9fa;
 }
 
 /*hide the items when the select box is closed:*/
@@ -578,6 +630,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.select-items {
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
 }
 
 .red-btn {
@@ -601,6 +661,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     margin-bottom: 10px;
 }
+.buy-course-btn-box button i {
+    font-size: 18px;
+    margin-right: 10px;
+}
 .white-btn {
     background-color: #fff;
     color: #233d63;
@@ -619,4 +683,153 @@ h1, h2, h3, h4, h5, h6 {
 .white-btn:hover {
     background-color: #ec5252;
     color: #fff;
+}
+
+
+.sidebar .schedulebox-title {
+    color: #233d63;
+    font-weight: 600;
+    line-height: 25px;
+    margin-bottom: 1px;
+    font-size: 18px;
+    padding-bottom: .5rem;
+}
+.divider {
+    border-bottom: 1px solid rgba(128, 137, 150, 0.1);
+    height: 1px;
+    margin: 0.5em 0 1.5em;
+}
+.divider span {
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: #ec5252;
+}
+.sidebar .generic-list-item {
+    padding-bottom: 1rem;
+}
+.sidebar .generic-list-item li {
+    color: #7f8897;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.sidebar .generic-list-item-flash li {
+    border-bottom: 1px solid rgba(128, 137, 150, 0.1);
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+.sidebar .generic-list-item li i {
+    color: #ec5252;
+    margin-right: .5rem;
+}
+.contentjustify {
+-ms-flex-pack: justify!important;
+    justify-content: space-between!important;
+}
+
+
+.border-bottom-gray {
+    border-bottom-color: rgba(128, 137, 150, 0.1) !important;
+}
+
+.media {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding-bottom: 1.5rem!important;
+    margin-bottom: 1.5rem!important;
+    border-bottom: 1px solid #dee2e6!important;
+}
+
+.media-card .media-img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+.media-card .media-img img {
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    margin-right: 1rem!important;
+}
+.media-body {
+    -ms-flex: 1;
+    flex: 1;
+}
+.media-card .media-body h5 {
+    color: #233d63;
+    font-weight: 600;
+    line-height: 18px;
+    font-size: 15px;
+}
+
+.view-all-course-btn-box .red-btn {
+    width: 100%!important;
+}
+
+
+.related-course-area {
+    padding: 60px 0;
+    background-color: #f7f7ff;
+}
+.morecourses {
+    font-weight: 600;
+    font-size: 28px;
+    padding-bottom: 35px;
+}
+.related-course-area .schedulebox:nth-child(3), .related-course-area .schedulebox:nth-child(6), .related-course-area .schedulebox:nth-child(9) {
+    margin-right: 0;
+}
+.related-course-area .schedulebox {
+    width: 32%;
+    display: inline-block;
+    margin-right: 1.6%;
+}
+
+
+.icon-element-sm {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+.icon-element {
+    color: #233d63;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 40px rgb(14 16 48 / 7%);
+    -moz-box-shadow: 0 0 40px rgba(14, 16, 48, 0.07);
+    box-shadow: 0 0 40px rgb(14 16 48 / 7%);
+    text-align: center;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    display: inline-block;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+
+.card-price {
+    font-weight: 700;
+    color: #233d63;
+}
+.card-price .before-price {
+  font-size: 16px;
+  margin-right: 3px;
+  color: #7f8897;
+  text-decoration: line-through;
+  font-weight: 500;
 }
