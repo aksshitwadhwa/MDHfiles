@@ -23,6 +23,9 @@ header {
   padding-bottom: .25rem!important;
   padding-top: .25rem!important;
 }
+.header-top .width50:first-child .header-widget {
+    float: left;
+}
 .header-menu-content {
   background-color: #fff!important;
   -webkit-transition: all 0.5s;
@@ -53,6 +56,9 @@ header {
   flex: 0 0 50%;
   max-width: 50%;
 }
+.header-widget ul li:first-child {
+    padding-left: 1rem;
+}
 .header-widget ul {
   padding: 0;
   margin: 0;
@@ -75,7 +81,6 @@ border-right: 1px solid #dee2e6!important;
   display: flex!important;
 }
 ul.generic-list-item {
-    border-left: 1px solid rgba(128, 137, 150, 0.1) !important;
     float:right;
 }
 .header-widget .generic-list-item li {
@@ -148,8 +153,6 @@ ul.generic-list-item {
       flex: 0 0 17%;
       max-width: 17%;
       position: relative;
-      width: 100%;
-      padding: 0 1%;
 }
 .logo-box {
     display: -webkit-flex;
@@ -309,32 +312,23 @@ ul.generic-list-item {
     width: 350px;
     margin-right: 25px;
     margin-left: 25px;
+    margin-bottom: 0;
 }
 .form-group {
     position: relative;
 }
-.form--control {
+.form-control {
     height: 50px;
     font-size: 14px;
     color: #233d63;
     border-color: rgba(127, 136, 151, 0.2);
     font-weight: 400;
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
     box-shadow: none;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
     border-radius: 5px;
-}
-.form-control {
     display: block;
     width: 100%;
-    height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5;
-    color: #495057;
     background-color: #fff;
     background-clip: padding-box;
     border: 1px solid #ced4da;
@@ -364,7 +358,7 @@ ul.generic-list-item {
 }
 .search-close-icon, .search-icon {
     position: absolute;
-    top: 0;
+    top: 25px;
     right: 0;
 }
 .main-menu {
@@ -425,6 +419,9 @@ ul {
     justify-content: space-between;
     padding-bottom: 0;
     margin-bottom: 0;
+}
+.shop-cart {
+    margin-right: 1.5rem;
 }
 .shop-cart > ul > li {
     position: relative;
@@ -534,4 +531,28 @@ ul {
     margin-right: 3px;
     color: #7f8897;
     text-decoration: line-through;
+}
+
+.red-btn {
+    background-color: #ec5252;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    line-height: 1.5;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+header .red-btn {
+    display: inline-block;
 }
