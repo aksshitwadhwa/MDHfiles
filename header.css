@@ -36,8 +36,6 @@ header {
 }
 .container {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -46,8 +44,6 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
   -ms-flex-align: center!important;
   align-items: center!important;
 }
@@ -89,6 +85,9 @@ ul.generic-list-item {
     align-items: center!important;
     display: -ms-flexbox!important;
     display: flex!important;
+}
+.header-widget .generic-list-item li:last-child {
+    border-right: 0px!important;
 }
 .generic-list-item li {
     color: #7f8897;
@@ -556,3 +555,69 @@ ul {
 header .red-btn {
     display: inline-block;
 }
+
+
+nav {
+margin-right: 18px;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+
+nav ul li {
+	display:inline-block;
+  margin-right: 18px;
+  text-transform: capitalize;
+	}
+
+nav a {
+	display:block;
+  font-size: 15px;
+      color: #233d63;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      padding: 5px 0;
+}
+
+nav a:hover {
+
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute;
+      padding-left: 10px; /* the height of the main nav */
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:200px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	left:170px;
+}
+
+
+/* Change this in order to change the Dropdown symbol */
+nav li > a:after { content:  ' +'; }
+nav li > a:only-child:after { content: ''; }
