@@ -593,7 +593,9 @@ nav ul ul {
 	display: none;
 	position: absolute;
       padding-left: 10px; /* the height of the main nav */
-}
+      z-index: 1030;
+      background: #fff;
+  }
 
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
