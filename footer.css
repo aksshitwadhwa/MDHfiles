@@ -196,3 +196,6 @@ ul.social-icons.social-icons-styled {
 ul.social-icons.social-icons-styled li {
     margin-right: 1rem;
 }
+.footer-area ul.generic-list-item {
+    float: none;
+}
